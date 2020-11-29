@@ -6,11 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* GET heath-check. */
+/* GET health-check. */
 router.get('/health', function(req, res, next) {
-  res.status(200).json({
-    date: new Date(),
-    status : 'OK'
-  });
+    res.status(200).json({
+        date: new Date(),
+        status : 'OK'
+    });
 });
+
 module.exports = router;
